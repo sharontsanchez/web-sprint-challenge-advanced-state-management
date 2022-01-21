@@ -112,9 +112,10 @@ In this project, you will build the reducer, actions and basic redux connects to
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. Add your answers below.
 
 1. What problem does the context API help solve?
-
+The context API is a react structure that enables you to exchange unique details and assists in solving prop-drilling from all levels of your application. It will help keep your state clean. 
 2. In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
-
+The building parts of redux are action, reducer and store. Actions are a plain JavaScript object that contains information. Actions are the only source of information for the store. Actions have a type field that tells what kind of action to perform and all other fields contain information or data. Reducers are the pure functions that take the current state and action and return the new state and tell the store how to do. The store is the object which holds the state of the application. Functions associated with Store: createStore() – To create a store,dispatch(action) -To change the state and getState() – for getting current state of store. The store in redux is known as the 'single source of truth' as it contains the entire state tree of our application.
 3. What does `redux-thunk` allow us to do? How does it change our `action-creators`?
-
+`redux-thunk` middleware allows us to write action creators that return a function instead of an action. The thunk can be used to delay the dispatch of an action, or to dispatch only if a certain condition is met. 
 4. What is your favorite state management system you've learned and this sprint? Please explain why!
+All state management systems are unique and exciting in their own manner. I did enjoy redux as it is organized and separates your concerns. This made it easier for me to understand the flow of data and predict their behavior and best with big scale applications. I also liked context API because they eliminate prop drilling and doesnt require adding extra libraries and work best for small applications.
